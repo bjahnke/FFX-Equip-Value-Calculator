@@ -13,7 +13,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.regex.*;
 import java.util.Hashtable;
-import java.util.Set;
 import java.util.ArrayList;
 
 public class WeamorValueCalc {
@@ -22,6 +21,45 @@ public class WeamorValueCalc {
 	
 	public static void main(String[] args) throws IOException {
 		abilityTable = parseText();
+		double value = calcValue();
+		System.out.println("Value: " + value);
+	}
+	
+	public static double calcValue() throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader("equipment.txt"));
+		String str = br.readLine();
+		Pattern pSlots = Pattern.compile("(?<=(^(Slots: )))[1-4]$");
+		Matcher mSlots = pSlots.matcher(str);
+		int totalSlots = 0;
+		int usedSlots = 0;
+		int abilityValueSum = 0;
+		
+		
+		if(mSlots.find()){
+			totalSlots = Integer.parseInt(mSlots.group());
+		}
+		else{
+			//ERROR: number of slots not found 
+			//OR
+			//Total slots = number of abilities listed?
+		}
+		
+		System.out.println("Abilities:");
+		while((str = br.readLine()) != null){
+			if(abilityTable.containsKey(str)){
+				AbilityData data = abilityTable.get(str);
+				System.out.println("\t"+data.abilityName);
+				abilityValueSum += data.gilVal;
+				usedSlots++;
+			}
+		}
+		for(int i = (totalSlots-usedSlots); i > 0; i--){
+			System.out.print("\t*empty slot*\n");
+		}
+		br.close();
+		
+		return applyFormula(abilityValueSum, totalSlots, usedSlots);
+		
 	}
 	
 	public static Hashtable<String, AbilityData> parseText() throws IOException{
@@ -61,8 +99,35 @@ public class WeamorValueCalc {
 				}
 			}
 		}
+		br.close();
 		System.out.println(aTable.toString());
 		return aTable;
 	}
-
+	
+	//FORMULA
+	
+	public static double applyFormula(int x, int tSlots, int uSlots){
+		double result = x + 12; //default 1 slot
+		if(tSlots == 2){
+			result = 1.2*x + 18;
+		}
+		if(tSlots == 3){
+			result = 4.5*x + 56;
+			if(uSlots > 1 ){
+				result = result/1.5;
+			}
+		}
+		if(tSlots == 4){
+			result = 15*x + 187;
+			if(uSlots == 2){
+				result = result/2;
+			}
+			else if(uSlots > 2){
+				result = result/3;
+			}
+		}
+		return result;
+	}
+	
+	
 }
