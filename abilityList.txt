@@ -1,0 +1,128 @@
+-------------------------------
+IIa. Auto-Abilities for Weapons
+-------------------------------
+50-----Sensor: Ability Sphere x2
+0------Piercing: Level 2 Key Sphere x1
+1500---First Strike: Return Sphere x1
+1500---Initiative: Chocobo Feather x6
+175----Firestrike: Bomb Fragment x4
+175----Thunderstrike: Electro Marble x4
+175----Waterstrike: Fish Scale x4
+175----Icestrike: Antarctic Wind x 4
+500----Darktouch: Eyedrops x60
+1000---Darkstrike: Smoke Bomb x20
+750----Silencetouch: Echo Screen x60
+2000---Silencestrike: Silence Grenade x20
+250----Sleeptouch: Sleeping Powder x10
+2000---Sleepstrike: Dream Powder x16
+375----Poisontouch: Antidote x99
+2500---Poisonstrike: Poison Fang x24
+1250---Stonetouch: Petrify Grenade x10
+3000---Stonestrike: Petrify Grenade x60
+2000---Deathtouch: Farplane Shadow x30
+5000---Deathstrike: Farplane Wind x60
+2000---Zombietouch: Holy Water x70
+3000---Zombiestrike: Candle of Life x30
+750----Slowtouch: Silver Hourglass x16
+2000---Slowstrike: Gold Hourglass x30
+25-----Str +3%: Power Sphere x3
+125----Str +5%: Stamina Spring x2
+1250---Str +10%: Skill Sphere x1
+2500---Str +20%: Supreme Gem x4
+25-----Magic +3%: Mana Sphere x3
+125----Magic +5%: Mana Spring x2
+1250---Magic +10%: Black Magic Sphere x1
+2500---Magic +20%: Supreme Gem x4
+1000---Counterattack: Friend Sphere x1
+5500---Evade & Counter: Teleport Sphere x1
+6250---Magic Counter: Shining Gem x16
+4250---Magic Booster: Turbo Ether x30
+2000---Alchemy: Healing Water x4
+5000---Half MP Cost: Twin Stars x20
+7500---One MP Cost: Three Stars x20
+10000--Double AP: Megalixir x20
+15000--Triple AP: Wings to Discovery x50
+6250---Overdrive -> AP: Doors to Tomorrow x10
+5000---SOS Overdrive: Gambler's Spirit x20
+7500---Double Overdrive: Underdog's Secret x30
+10000--Triple Overdrive: Winning Formula x30
+0------Gillionaire: Designer Wallet x30
+0------Break Damage Limit: Dark Matter x60
+1500---Capture: Can only be bought at Monster Arena
+1625---No Encounters: Purifying Salt x30
+------------------------------
+IIb. Auto-Abilities for Armor
+------------------------------
+375----Fire Ward: Bomb Fragment x4
+750----Fireproof: Bomb Core x8
+2500---Fire Eater: Fire Gem x20
+375----Lightning Ward: Electro Marble x4
+750----Lightningproof: Lightning Marble x8
+2500---Lightning Eater: Lightning Gem x20
+375----Water Ward: Fish Scale x4
+750----Waterproof: Dragon Scale x8
+2500---Water Eater: Water Gem x20
+375----Ice Ward: Antarctic Wind x4
+750----Iceproof: Arctic Wind x8
+2500---Ice Eater: Ice Gem x20
+125----Dark Ward: Eyedrops x40
+500----Darkproof: Smoke Bomb x20
+125----Silence Ward: Echo Screen x30
+500----Silenceproof: Silent Grenade x10
+50-----Sleep Ward: Sleeping Powder x6
+200----Sleepproof: Dream Powder x8
+100----Poison Ward: Antidote x40
+375----Poisonproof: Poison Fang x12
+300----Stone Ward: Soft x30
+625----Stoneproof: Petrify Grenade x20
+500----Death Ward: Farplane Shadow x15
+1000---Deathproof: Farplane Wind x60
+500----Zombie Ward: Holy Water x30
+1000---Zombieproof: Candle of Life x10
+250----Slow Ward: Silver Hourglass x10
+750----Slowproof: Gold Hourglass x20
+250----Confuse Ward: Musk x16
+1000---Confuseproof: Musk x48
+250----Berserk Ward: Hypello Potion x8
+1000---Berserkproof: Hypello Potion x32
+2000---Curseproof: Tetra Elemental x12
+125----SOS NulBlaze: Bomb Core x1
+125----SOS NulShock: Lightning Marble x1
+125----SOS NulTide: Dragon Scale x1
+125----SOS NulFrost: Arctic Wind x1
+1000---SOS Shell: Lunar Curtain x8
+1000---SOS Protect: Light Curtain x8
+750----SOS Reflect: Star Curtain x8
+5000---SOS Haste: Chocobo Feather x20
+5000---SOS Regen: Healing Spring x12
+5500---Auto Shell: Lunar Curtain x80
+5500---Auto Protect: Light Curtain x80
+3500---Auto Reflect: Star Curtain x40
+12500--Auto Haste: Chocobo Wing x80
+15000--Auto Regen: Healing Spring x80
+50-----Defense +3%: Power Sphere x3
+125----Defense +5%: Stamina Spring x2
+1250---Defense +10%: Special Sphere x1
+2500---Defense +20%: Blessed Gem x4
+50-----Magic Defense +3%: Mana Sphere x3
+125----Magic Defense +5%: Mana Spring x2
+1250---Magic Defense +10%: White Magic Sphere x1
+2500---Magic Defense +20%: Blessed Gem x4
+25-----HP +5%: X-Potion x5
+250----HP +10%: Soul Spring x3
+1500---HP +20%: Elixir x5
+3750---HP +30%: Stamina Tonic x1
+300----MP +5%: Ether x5
+1500---MP +10%: Soul Spring x3
+2000---MP +20%: Elixir x5
+4500---MP +30%: Mana Tonic x1
+3000---Auto Potion: Stamina Tablet x4
+2500---Auto Med: Remedy x20
+5000---Auto Phoenix: Mega Phoenix x20
+10000--Pickpocket: Amulet x30
+15000--Master Thief: Pendulum x30
+1500---HP Stroll: Stamina Tablet x2
+1500---MP Stroll: Mana Tablet x2
+1625---No Encounters: Purifying Salt x30
+0------Break HP Limit: Wings to Discovery x30
+0------Break MP Limit: Three Stars x30
