@@ -12,6 +12,8 @@ Improvements to be made:
 -Meaningful error handling
 -build an executable
 -gui instead of txt file
+-given at least one used slot and at least one open slot, return a list of abilities that will increase
+  the current equipment's value. Provide value difference and recipe.
 -get data on recipe items
   -in-store item cost
   -get bribe cost where cost = bribe/(num of that item recieved)
@@ -24,5 +26,6 @@ Improvements to be made:
         Additionaly, adjusting for possible monster combinations by battle/area would result in the 
         best possible yield scenario for a given item, this is doable but not for me haha, unless
         someone hands me the data I need.
+
     
   
