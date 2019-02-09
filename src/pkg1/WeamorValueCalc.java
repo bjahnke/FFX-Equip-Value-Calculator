@@ -14,18 +14,21 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.regex.*;
 import java.util.Hashtable;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.ArrayList;
 import static pkg1.Equip.*;
 
 public class WeamorValueCalc {
 	
 	private static Hashtable<String, AbilityData> abilityTable = new Hashtable<String, AbilityData>();
+	private static ArrayList<AbilityData> equip = new ArrayList<AbilityData>();
 
 	
 	public static void main(String[] args) throws IOException {
 		abilityTable = parseText();
 		double value = calcValue();
-		System.out.println("Value: " + value + " gil");
+		System.out.println("Value: " + (int)value + " gil");
+		valueImprovements(value);
 	}
 	
 	public static double calcValue() throws IOException{
@@ -37,6 +40,8 @@ public class WeamorValueCalc {
 		int totalSlots = 0;
 		int usedSlots = 0;
 		int abilityValueSum = 0;
+		
+		AbilityData firstAbility = null;
 		
 		
 		if(mSlots.find()){
@@ -52,13 +57,24 @@ public class WeamorValueCalc {
 		while((str = br.readLine()) != null){
 			if(abilityTable.containsKey(str)){
 				AbilityData data = abilityTable.get(str);
-				System.out.println("\t"+data.abilityName);
-				abilityValueSum += data.gilVal;
-				usedSlots++;
+				equip.add(data); //store this ability in a list for later use
+				if(firstAbility == null){
+					firstAbility = data;
+				}
+				if(firstAbility.equipType == data.equipType){
+					System.out.println("\t"+data.abilityName);
+					abilityValueSum += data.gilVal;
+					usedSlots++;
+				}
+				else{
+					System.out.println("Ability Equip Type Mismatch: " + firstAbility.abilityName
+							+ "->" + firstAbility.equipType + ", " + data.abilityName + "->" + data.equipType);
+				}
 			}
 		}
 		for(int i = (totalSlots-usedSlots); i > 0; i--){
 			System.out.print("\t*empty slot*\n");
+			equip.add(null);
 		}
 		br.close();
 		
@@ -99,7 +115,7 @@ public class WeamorValueCalc {
 							if(m_rQ.find()){
 								String rQ = m_rQ.group();
 								AbilityData abilityData = new AbilityData(gil, aName, rName, rQ, eType);
-								System.out.println(abilityData.toString());
+								//System.out.println(abilityData.toString());
 								
 								aTable.put(aName, abilityData);
 							}
@@ -115,8 +131,34 @@ public class WeamorValueCalc {
 		return aTable;
 	}
 	
-	public static ArrayList<AbilityData> valueImprovements(){
-		
+	public static ArrayList<AbilityData> valueImprovements(double val){
+		int oldValue = (int) val;
+		int i = 0;
+		int realAbilitySum = 0;
+		while(i < equip.size()){
+			if(equip.get(i) == null){
+				AtomicInteger realCopy = new AtomicInteger(realAbilitySum);
+				AtomicInteger usedCopy = new AtomicInteger(i);
+				AtomicInteger oldValCopy= new AtomicInteger(oldValue);
+				System.out.println("\nAbilities that improve value:");
+				
+				abilityTable.forEach((key, abObj) -> {
+					if(equip.get(0) == null || abObj.equipType == equip.get(0).equipType){
+						int possibleAbilitySum = abObj.gilVal + realCopy.get();
+						int newVal = (int)applyFormula(possibleAbilitySum, equip.size(), usedCopy.get());
+						if(newVal > oldValCopy.get()){
+							int dif = newVal - oldValCopy.get();
+							System.out.println("\t" + abObj.abilityName + ": +" + dif);
+						}
+					}
+				});
+				return null;
+			}
+			else {
+				realAbilitySum += equip.get(i).gilVal;
+			}
+			i++;
+		}
 		return null;
 	}
 	
