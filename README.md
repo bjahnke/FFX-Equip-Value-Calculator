@@ -1,10 +1,13 @@
 # FFX-WeaponArmor-Value-Calc
 Calculates the value of armor and weapons in Final Fantasy X based on abilities and slots attached.
+Based on the data provided by: https://gamefaqs.gamespot.com/ps2/197344-final-fantasy-x/faqs/16153
 
 Basic functionality complete. The user can specify the total number of ability slots 1 - 4, and 
 a list of abilities less than or equal to the total specified within "equipment.txt". The script reads one ability per
-line so ensure that the abilities are listed in that fashion. The script doesn't account for
-extra whitespaces in the text file and is ability names are case sensitive. No real error handling if not used 
+line so ensure that the abilities are listed in that fashion. If there is at least one open slot in the setup, the 
+program will print a list of abilities and the added value they will bring if applied to the next open slot.
+The script doesn't account for extra whitespaces in the text file and is ability names are case sensitive. No real 
+error handling if not used 
 as intended.
 
 Improvements to be made:
