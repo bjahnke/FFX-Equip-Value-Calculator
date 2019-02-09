@@ -1,0 +1,120 @@
+Ability Sphere:100
+Level 2 Key Sphere:
+Return Sphere:
+Chocobo Feather:
+Bomb Fragment:
+Electro Marble:
+Fish Scale:
+Antarctic Wind:
+Eyedrops:50
+Smoke Bomb:
+Echo Screen:50
+Silence Grenade:
+Sleeping Powder:
+Dream Powder:
+Antidote:50
+Poison Fang:
+Petrify Grenade:
+Petrify Grenade:
+Farplane Shadow:
+Farplane Wind:
+Holy Water:300
+Candle of Life:
+Silver Hourglass:
+Gold Hourglass:
+Power Sphere:
+Stamina Spring:
+Skill Sphere:
+Supreme Gem:
+Mana Sphere:
+Mana Spring:
+Black Magic Sphere:
+Supreme Gem:
+Friend Sphere:
+Teleport Sphere:
+Shining Gem:
+Turbo Ether:
+Healing Water:
+Twin Stars:
+Three Stars:
+Megalixir:
+Wings to Discovery:
+Doors to Tomorrow:
+Gambler's Spirit:
+Underdog's Secret:
+Winning Formula:
+Designer Wallet:
+Dark Matter:
+Purifying Salt:
+Bomb Fragment:
+Bomb Core:
+Fire Gem:
+Electro Marble:
+Lightning Marble:
+Lightning Gem:
+Fish Scale:
+Dragon Scale:
+Water Gem
+Antarctic Wind
+Arctic Wind
+Ice Gem
+Eyedrops
+Smoke Bomb
+Echo Screen
+Silent Grenade
+Sleeping Powder
+Dream Powder
+Antidote
+Poison Fang
+Soft
+Petrify Grenade
+Farplane Shadow
+Farplane Wind
+Holy Water
+Candle of Life
+Silver Hourglass
+Gold Hourglass
+Musk
+Musk
+Hypello Potion
+Hypello Potion
+Tetra Elemental
+Bomb Core
+Lightning Marble
+Dragon Scale
+Arctic Wind
+Lunar Curtain
+Light Curtain
+Star Curtain
+Chocobo Feather
+Healing Spring
+Lunar Curtain
+Light Curtain
+Star Curtain
+Chocobo Wing
+Healing Spring
+Power Sphere
+Stamina Spring
+Special Sphere
+Blessed Gem
+Mana Sphere
+Mana Spring
+White Magic Sphere
+Blessed Gem
+Soul Spring
+Elixir
+Stamina Tonic
+Ether
+Soul Spring
+Elixir
+Mana Tonic
+Stamina Tablet
+Remedy
+Mega Phoenix
+Amulet
+Pendulum
+Stamina Tablet
+Mana Tablet
+Purifying Salt
+Wings to Discovery
+Three Stars

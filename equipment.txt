@@ -1,2 +1,3 @@
-Slots: 1
+Slots: 3
+Master Thief
 Sensor

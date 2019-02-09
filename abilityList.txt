@@ -42,7 +42,7 @@ IIa. Auto-Abilities for Weapons
 7500---One MP Cost: Three Stars x20
 10000--Double AP: Megalixir x20
 15000--Triple AP: Wings to Discovery x50
-6250---Overdrive -> AP: Doors to Tomorrow x10
+6250---Overdrive to AP: Doors to Tomorrow x10
 5000---SOS Overdrive: Gambler's Spirit x20
 7500---Double Overdrive: Underdog's Secret x30
 10000--Triple Overdrive: Winning Formula x30
@@ -108,7 +108,7 @@ IIb. Auto-Abilities for Armor
 125----Magic Defense +5%: Mana Spring x2
 1250---Magic Defense +10%: White Magic Sphere x1
 2500---Magic Defense +20%: Blessed Gem x4
-25-----HP +5%: X-Potion x5
+25-----HP +5%: X Potion x5
 250----HP +10%: Soul Spring x3
 1500---HP +20%: Elixir x5
 3750---HP +30%: Stamina Tonic x1

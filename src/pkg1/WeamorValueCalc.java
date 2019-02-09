@@ -11,18 +11,21 @@ package pkg1;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.regex.*;
 import java.util.Hashtable;
 import java.util.ArrayList;
+import static pkg1.Equip.*;
 
 public class WeamorValueCalc {
 	
 	private static Hashtable<String, AbilityData> abilityTable = new Hashtable<String, AbilityData>();
+
 	
 	public static void main(String[] args) throws IOException {
 		abilityTable = parseText();
 		double value = calcValue();
-		System.out.println("Value: " + value);
+		System.out.println("Value: " + value + " gil");
 	}
 	
 	public static double calcValue() throws IOException{
@@ -30,6 +33,7 @@ public class WeamorValueCalc {
 		String str = br.readLine();
 		Pattern pSlots = Pattern.compile("(?<=(^(Slots: )))[1-4]$");
 		Matcher mSlots = pSlots.matcher(str);
+		
 		int totalSlots = 0;
 		int usedSlots = 0;
 		int abilityValueSum = 0;
@@ -67,14 +71,17 @@ public class WeamorValueCalc {
 		BufferedReader br = new BufferedReader(new FileReader("abilityList.txt"));
 		String aDataStr = "";
 		Pattern p_gil = Pattern.compile("^[\\d]+");
-		Pattern p_aName = Pattern.compile("(?<=[-]+)[A-Za-z ]+(?=[:])");
-		Pattern p_rName = Pattern.compile("(?<=(: ))[A-Za-z ]+(?=( x))");
+		Pattern p_aName = Pattern.compile("(?<=[-]+)[\\w+\\d%& ]+(?=[:])");
+		Pattern p_rName = Pattern.compile("(?<=(: ))[A-Za-z\\d\' ]+(?=( x))");
 		Pattern p_rQ = Pattern.compile("\\d+$");
-		
 		Pattern isData = p_gil;
+		
+		Pattern pArm = Pattern.compile("Armor");
+		Equip eType = WEAPON;
 		
 		while((aDataStr = br.readLine()) != null){
 			Matcher dataMatch = isData.matcher(aDataStr);
+			Matcher mArm = pArm.matcher(aDataStr);
 			
 			//if the line is data then we pattern match and store
 			if(dataMatch.find()){
@@ -91,17 +98,26 @@ public class WeamorValueCalc {
 							String rName = m_rName.group();
 							if(m_rQ.find()){
 								String rQ = m_rQ.group();
-								AbilityData abilityData = new AbilityData(gil, aName, rName, rQ);
+								AbilityData abilityData = new AbilityData(gil, aName, rName, rQ, eType);
+								System.out.println(abilityData.toString());
+								
 								aTable.put(aName, abilityData);
 							}
 						}
 					}
 				}
 			}
+			else if(mArm.find()){
+				eType = ARMOR;
+			}
 		}
 		br.close();
-		System.out.println(aTable.toString());
 		return aTable;
+	}
+	
+	public static ArrayList<AbilityData> valueImprovements(){
+		
+		return null;
 	}
 	
 	//FORMULA
